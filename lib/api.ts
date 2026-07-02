@@ -71,6 +71,7 @@ export const api = {
   register: (body: { name: string; email: string; password: string }) =>
     request<{ needsVerification: boolean; email: string }>('/auth/register', {
       method: 'POST',
+      credentials: 'include', 
       body: JSON.stringify(body),
     }),
   login: (body: { email: string; password: string }) =>
