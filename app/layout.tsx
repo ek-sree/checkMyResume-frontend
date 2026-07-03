@@ -23,6 +23,11 @@ export const metadata: Metadata = {
     default: 'Free AI Resume Checker & ATS Resume Scanner | CheckMyResume AI',
     template: '%s | CheckMyResume AI',
   },
+    icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+    apple: "/favicon.ico",
+  },
   description:
     'Use CheckMyResume AI as a free resume checker and ATS resume scanner to improve your resume, boost keyword matching, write better cover letters, and prepare for interviews.',
   keywords: [
