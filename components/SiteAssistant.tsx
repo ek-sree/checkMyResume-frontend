@@ -67,7 +67,7 @@ export function SiteAssistant() {
           <div className="flex items-center justify-between border-b border-line bg-ink px-4 py-3 text-white">
             <div className="flex items-center gap-2">
               <Bot className="h-5 w-5" />
-              <span className="text-sm font-semibold">CareerForge Assistant</span>
+              <span className="text-sm font-semibold">CheckMyResume Assistant</span>
             </div>
             <button onClick={() => setOpen(false)} aria-label="Close assistant" className="rounded-lg p-1 hover:bg-white/10">
               <X className="h-4 w-4" />

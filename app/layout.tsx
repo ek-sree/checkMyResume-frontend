@@ -19,9 +19,39 @@ const sans = Manrope({
 });
 
 export const metadata: Metadata = {
-  title: 'CareerForge AI — Your AI Career Coach',
+  title: {
+    default: 'Free AI Resume Checker & ATS Resume Scanner | CheckMyResume AI',
+    template: '%s | CheckMyResume AI',
+  },
   description:
-    'An agentic AI career coach that tailors your resume, writes cover letters, scores your ATS match, and runs mock interviews — watch the AI work, step by step.',
+    'Use CheckMyResume AI as a free resume checker and ATS resume scanner to improve your resume, boost keyword matching, write better cover letters, and prepare for interviews.',
+  keywords: [
+    'free resume checker',
+    'resume checker',
+    'ATS resume checker',
+    'resume score',
+    'resume analysis',
+    'cover letter writer',
+    'mock interview prep',
+    'job application coach',
+  ],
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Free AI Resume Checker & ATS Resume Scanner | CheckMyResume AI',
+    description:
+      'Instantly analyze your resume, score your ATS match, and improve your job applications with AI guidance.',
+    type: 'website',
+    locale: 'en_US',
+    siteName: 'CheckMyResume AI',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Free AI Resume Checker & ATS Resume Scanner | CheckMyResume AI',
+    description:
+      'Instantly analyze your resume, score your ATS match, and improve your job applications with AI guidance.',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

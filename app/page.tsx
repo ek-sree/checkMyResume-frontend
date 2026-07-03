@@ -5,7 +5,7 @@ import { OpenAuth } from '@/components/OpenAuth';
 import { LandingDemo } from '@/components/LandingDemo';
 import { Pricing } from '@/components/Pricing';
 import { Reveal } from '@/components/Reveal';
-import { Target, FileText, Mail, MessageSquare, Compass, ArrowRight, Brain } from 'lucide-react';
+import { Target, FileText, Mail, MessageSquare, Compass, ArrowRight, Brain, Sparkles } from 'lucide-react';
 
 const FEATURES = [
   { icon: Target, title: 'ATS match scoring', body: 'See exactly how your resume scores against a job — with the keywords you have and the ones you’re missing.' },
@@ -22,9 +22,36 @@ const STEPS = [
   { n: '03', title: 'Get coached', body: 'Watch the agent work, then get your score, tailored resume, cover letter, and interview prep.' },
 ];
 
+const seoSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebApplication',
+  name: 'CheckMyResume AI',
+  applicationCategory: 'CareerApplication',
+  operatingSystem: 'All',
+  url: '/',
+  description:
+    'AI-powered free resume checker and ATS resume scanner for job seekers who want better keyword matching, cover letters, and interview prep.',
+  offers: {
+    '@type': 'Offer',
+    price: '0',
+    priceCurrency: 'USD',
+  },
+  featureList: [
+    'Free resume checker',
+    'ATS resume scoring',
+    'Resume tailoring',
+    'Cover letter generation',
+    'Mock interview prep',
+  ],
+};
+
 export default function LandingPage() {
   return (
     <div className="min-h-screen">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(seoSchema) }}
+      />
       <Navbar />
 
       <section className="container-page relative overflow-hidden pt-16 pb-20 sm:pt-24">
@@ -41,15 +68,16 @@ export default function LandingPage() {
             className="animate-fade-up font-display text-4xl font-bold leading-[1.1] tracking-tight text-ink sm:text-6xl"
             style={{ animationDelay: '80ms' }}
           >
-            Your AI career coach that
-            <span className="text-brand-600"> does the work.</span>
+            The best free
+            <span className="text-brand-600"> resume checker</span>
+            for ATS-ready applications.
           </h1>
           <p
             className="mx-auto mt-6 max-w-2xl animate-fade-up text-lg leading-relaxed text-ink-soft"
             style={{ animationDelay: '160ms' }}
           >
-            CheckMyResume is an agentic AI that tailors your resume, writes your cover letter, scores your
-            ATS match, and runs mock interviews — and you watch it think, step by step.
+            CheckMyResume AI is a free resume checker and ATS resume scanner that helps you improve keyword match,
+            tailor your resume, generate a cover letter, and practice mock interviews with real-time AI coaching.
           </p>
           <div
             className="mt-9 flex animate-fade-up flex-col items-center justify-center gap-3 sm:flex-row"
@@ -95,6 +123,44 @@ export default function LandingPage() {
             ))}
           </div>
         </div>
+      </section>
+
+      <section className="container-page py-20">
+        <Reveal>
+          <div className="grid gap-8 lg:grid-cols-[1.1fr_0.9fr] lg:items-start">
+            <div>
+              <h2 className="text-3xl font-bold text-ink sm:text-4xl">Why job seekers use CheckMyResume AI</h2>
+              <p className="mt-4 text-lg leading-relaxed text-ink-soft">
+                Whether you need a free resume checker, an ATS resume checker, or a fast way to understand your
+                resume score, CheckMyResume AI makes your application stronger with clear, actionable feedback.
+              </p>
+              <ul className="mt-6 space-y-3 text-ink-soft">
+                <li className="flex items-start gap-3">
+                  <Sparkles className="mt-1 h-5 w-5 text-brand-600" />
+                  <span>Find the missing keywords that help your resume pass ATS screening.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Sparkles className="mt-1 h-5 w-5 text-brand-600" />
+                  <span>See a practical resume score and get tailored suggestions for each role.</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <Sparkles className="mt-1 h-5 w-5 text-brand-600" />
+                  <span>Build a better application with cover letters, interview prep, and coaching in one place.</span>
+                </li>
+              </ul>
+            </div>
+            <div className="card p-6">
+              <h3 className="text-lg font-semibold text-ink">Popular searches this app helps with</h3>
+              <div className="mt-4 flex flex-wrap gap-2">
+                {['free resume checker', 'ats resume checker', 'resume score', 'resume analysis', 'cover letter AI', 'mock interview'].map((item) => (
+                  <span key={item} className="rounded-full border border-line bg-surface px-3 py-1 text-sm text-ink-soft">
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </Reveal>
       </section>
 
       <section className="container-page py-20">

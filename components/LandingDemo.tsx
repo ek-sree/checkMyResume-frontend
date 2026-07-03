@@ -53,7 +53,7 @@ export function LandingDemo() {
           <span className="h-3 w-3 rounded-full bg-rose-300" />
           <span className="h-3 w-3 rounded-full bg-amber-300" />
           <span className="h-3 w-3 rounded-full bg-emerald-300" />
-          <span className="ml-3 text-xs font-medium text-ink-muted">careerforge.ai / analyze</span>
+          <span className="ml-3 text-xs font-medium text-ink-muted">checkmyresume.ai / analyze</span>
           <span className="ml-auto flex items-center gap-1.5 text-xs font-medium text-ink-soft">
             <span className={`h-1.5 w-1.5 rounded-full ${phase === 'result' ? 'bg-emerald-500' : 'bg-brand-500 animate-pulse-soft'}`} />
             {STATUS[phase]}
