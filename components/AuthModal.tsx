@@ -163,7 +163,7 @@ function AuthModalView({ initialMode, onClose }: { initialMode: Mode; onClose: (
 
   const titles: Record<Step, { t: string; s: string }> = {
     login: { t: 'Welcome back', s: 'Log in to keep coaching your career.' },
-    signup: { t: 'Create your account', s: 'Start with 5 free AI runs — no card required.' },
+    signup: { t: 'Create your account', s: 'Start with a free AI run — no card required.' },
     otp: { t: 'Verify your email', s: `Enter the 4-digit code we emailed you.` },
     forgot: { t: 'Reset your password', s: 'We’ll email you a 4-digit code.' },
     reset: { t: 'Set a new password', s: 'Enter the code and your new password.' },
@@ -173,7 +173,7 @@ function AuthModalView({ initialMode, onClose }: { initialMode: Mode; onClose: (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true">
       <button aria-label="Close" onClick={onClose} className="absolute inset-0 cursor-default bg-ink/40 backdrop-blur-sm" />
 
-      <div className="relative w-full max-w-md animate-fade-up rounded-2xl border border-line bg-surface p-7 shadow-lift">
+      <div className="relative w-full max-w-[min(92vw,28rem)] animate-fade-up rounded-2xl border border-line bg-surface p-5 sm:p-7 shadow-lift">
         <button onClick={onClose} aria-label="Close" className="absolute right-4 top-4 rounded-lg p-1.5 text-ink-muted transition-colors hover:bg-ink/5 hover:text-ink">
           <X className="h-5 w-5" />
         </button>

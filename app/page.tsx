@@ -84,7 +84,7 @@ export default function LandingPage() {
             style={{ animationDelay: '240ms' }}
           >
             <OpenAuth mode="signup" className="btn-brand px-6 py-3 text-base">
-              Start free — 5 runs
+              Start a free run
               <ArrowRight className="h-4 w-4" />
             </OpenAuth>
             <a href="#pricing" className="btn-outline px-6 py-3 text-base">
